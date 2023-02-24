@@ -46,7 +46,6 @@
         <a class="badge text-bg-danger" id="hapus" onclick="return confirm('Yakin Ingin Menghapus Data Yang Dipilih ?')" href="<?= base_url('mahasiswa/hapus/');?><?= $mhs['id'];?>">Hapus</a>
         <a class="badge text-bg-primary" href="<?= base_url('mahasiswa/detail/');?><?= $mhs['id'];?>">Detail</a>
         <a class="badge text-bg-success" href="<?= base_url('mahasiswa/ubah/');?><?= $mhs['id'];?>">Ubah</a>
-
         </li>
         <?php endforeach;?>
         </ul>

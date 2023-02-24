@@ -53,5 +53,24 @@ class Peoples extends CI_Controller{
         $this->load->view('peoples/index', $data);
         $this->load->view('templates/footer');
     }
+
+    public function detail($id)
+    {
+        $this->load->model('Peoples_model');
+        $data['judul'] = "Detail Data";
+        $data['peoples'] = $this->Peoples_model->ambilDataById($id);
+        $this->load->view('templates/header', $data);
+        $this->load->view('peoples/detail', $data);
+        $this->load->view('templates/footer');
+    }
+
+    public function hapus($id)
+    {
+        $this->load->model('Peoples_model');
+        $data['peoples'] = $this->Peoples_model->hapusData($id);
+        $this->load->view('templates/header', $data);
+        $this->load->view('peoples/detail', $data);
+        $this->load->view('templates/footer');
+    }
     
 }

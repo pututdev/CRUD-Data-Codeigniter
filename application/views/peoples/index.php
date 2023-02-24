@@ -19,9 +19,8 @@
                         <th><?= $m['name'];?></th>
                         <th><?= $m['email'];?></th>
                         <th>
-                            <a href="" class="badge text-bg-warning">Detail</a>
-                            <a href="" class="badge text-bg-success">Edit</a>
-                            <a href="" class="badge text-bg-danger">Hapus</a>
+                            <a href="<?= base_url('peoples/detail/');?><?= $m['id'];?>" class="badge text-bg-warning">Detail</a>
+                            <a href="<?= base_url('peoples/hapus/');?><?= $m['id'];?>" class="badge text-bg-danger" onclick="return confirm('Yakin Ingin Menghapus Data ?');">Hapus</a>
                         </th>
                     </tr>
                 </tbody>
